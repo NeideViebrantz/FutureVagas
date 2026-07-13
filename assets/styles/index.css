@@ -1,0 +1,261 @@
+/* Configurações Globais Fluidas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #1e293b;
+    color: #fff;
+    padding: 1.5rem 1rem;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Formulário de Perfil */
+.profile-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.profile-section h2 {
+    margin-bottom: 1.5rem;
+    color: #1e293b;
+}
+
+.perfil-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #475569;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Caixa de Foco Visível para Acessibilidade */
+.form-group input:focus,
+.form-group select:focus,
+.btn-submit:focus {
+    outline: 3px solid #3b82f6;
+    outline-offset: 1px;
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: #475569;
+}
+
+.checkbox-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+/* Painel de Vaga Ideal Recomendada */
+.painel-destaque {
+    background-color: #eff6ff;
+    border-left: 6px solid #2563eb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.match-badge {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.recomendacao-box {
+    margin-top: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #bfdbfe;
+}
+
+/* Grade de Vagas (Flexbox Responsivo - Mobile First) */
+.titulo-lista-vagas {
+    margin: 1.5rem 0 1rem 0;
+    color: #1e293b;
+}
+
+.vagas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card-vaga {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+    border-top: 4px solid #cbd5e1;
+}
+
+.card-vaga.status-alta { border-top-color: #22c55e; }
+.card-vaga.status-média { border-top-color: #eab308; }
+.card-vaga.status-baixa { border-top-color: #ef4444; }
+
+.badge-classificacao {
+    align-self: flex-start;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: #f1f5f9;
+}
+
+.status-alta .badge-classificacao { color: #15803d; background: #dcfce7; }
+.status-média .badge-classificacao { color: #a16207; background: #fef9c3; }
+.status-baixa .badge-classificacao { color: #b91c1c; background: #fee2e2; }
+
+/* Barra de Progresso */
+.progresso-container {
+    background: #e2e8f0;
+    border-radius: 20px;
+    height: 12px;
+    width: 100%;
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+.barra-progresso {
+    background: #3b82f6;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.porcentagem-texto {
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+
+/* Status Operacionais de Rede */
+.status-mensagem {
+    text-align: center;
+    font-weight: bold;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+}
+.status-mensagem.carregando { color: #2563eb; }
+.status-mensagem.erro { color: #ef4444; border: 1px solid #fee2e2; background: #fff5f5; }
+
+/* Rodapé */
+.main-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #1e293b;
+    color: #94a3b8;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* --- MEDIA QUERIES (Responsividade de Mobile para Telas Grandes) --- */
+@media (min-width: 768px) {
+    .vagas-grid {
+        flex-direction: row;
+        flex-wrap: wrap; /* RF11: Flexbox wrap + gap */
+    }
+
+    .card-vaga {
+        flex: 1 1 calc(50% - 0.75rem); /* Exibe duas colunas em telas médias */
+    }
+}

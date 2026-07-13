@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureVagas | Conectando Talentos </title>
+    <meta name="description" content="O FutureVagas analisa o seu perfil profissional, calcula a compatibilidade com vagas de Front-End e recomenda caminhos de estudo personalizados.">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <img src="/assets/img/logo-future-vagas.jpg" alt="Logotipo FutureVagas" class="logo" width="300">
+            <h1>FutureVagas</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="profile-section" aria-labelledby="titulo-perfil">
+            <h2 id="titulo-perfil">Seu Perfil Profissional</h2>
+            <form id="perfil-form" class="perfil-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required placeholder="Ex: Neide Jucimara">
+                </div>
+
+                <div class="form-group">
+                    <label for="area">Área de Atuação:</label>
+                    <select id="area" required>
+                        <option value="">Selecione...</option>
+                        <option value="Front-End Júnior">Front-End Júnior</option>
+                        <option value="Front-End Estágio">Front-End Estágio</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experiencia">Tempo de Experiência (em meses):</label>
+                    <input type="number" id="experiencia" min="0" required placeholder="Ex: 6">
+                </div>
+
+                <div class="form-group checkboxes-group">
+                    <fieldset>
+                        <legend>Suas Habilidades Técnicas:</legend>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="habilidades" value="HTML"> HTML</label>
+                            <label><input type="checkbox" name="habilidades" value="CSS"> CSS</label>
+                            <label><input type="checkbox" name="habilidades" value="JavaScript"> JavaScript</label>
+                            <label><input type="checkbox" name="habilidades" value="React"> React</label>
+                            <label><input type="checkbox" name="habilidades" value="TypeScript"> TypeScript</label>
+                            <label><input type="checkbox" name="habilidades" value="Git"> Git</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <button type="submit" class="btn-submit">Analisar Minha Compatibilidade</button>
+            </form>
+        </section>
+
+        <section class="results-section" id="resultados-container" aria-live="polite">
+            <p class="placeholder-text">Preencha o formulário acima para visualizar as vagas disponíveis e sua compatibilidade.</p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 FutureVagas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="module" src="/assets/scripts/main.js"></script>
+</body>
+</html>
